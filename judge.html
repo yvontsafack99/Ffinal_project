@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Judge Grading Interface</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Project Grading Form</h1>
+            <p>Logged in as: <span id="judgeName">Judge</span></p>
+            <button id="logoutBtn">Logout</button>
+        </header>
+        
+        <form id="gradingForm">
+            <div class="form-group">
+                <label for="groupNumber">Group Number:</label>
+                <input type="number" id="groupNumber" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="groupMembers">Group Members (comma separated):</label>
+                <input type="text" id="groupMembers" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="projectTitle">Project Title:</label>
+                <input type="text" id="projectTitle" required>
+            </div>
+            
+            <table>
+                <thead>
+                    <tr>
+                        <th>Criteria</th>
+                        <th>Developing (0-10)</th>
+                        <th>Accomplished (10-15)</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Articulate requirements</td>
+                        <td><input type="number" class="developing" min="0" max="10"></td>
+                        <td><input type="number" class="accomplished" min="10" max="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Choose appropriate tools and methods for each task</td>
+                        <td><input type="number" class="developing" min="0" max="10"></td>
+                        <td><input type="number" class="accomplished" min="10" max="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Give clear and coherent oral presentation</td>
+                        <td><input type="number" class="developing" min="0" max="10"></td>
+                        <td><input type="number" class="accomplished" min="10" max="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Functional well as a team</td>
+                        <td><input type="number" class="developing" min="0" max="10"></td>
+                        <td><input type="number" class="accomplished" min="10" max="15"></td>
+                    </tr>
+                    <tr>
+                        <td>Total</td>
+                        <td id="totalDeveloping">0</td>
+                        <td id="totalAccomplished">0</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <div class="form-group">
+                <label for="comments">Comments:</label>
+                <textarea id="comments" rows="4"></textarea>
+            </div>
+            
+            <button type="submit">Submit Grades</button>
+        </form>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>

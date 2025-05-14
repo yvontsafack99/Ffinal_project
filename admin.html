@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Dashboard</h1>
+            <p>View all project grades and comments</p>
+            <button id="logoutBtn">Logout</button>
+        </header>
+        
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search by group number...">
+            <button id="searchBtn">Search</button>
+        </div>
+        
+        <div id="gradesTableContainer">
+            <table id="gradesTable">
+                <thead>
+                    <tr>
+                        <th>Group #</th>
+                        <th>Members</th>
+                        <th>Project Title</th>
+                        <th>Developing (0-40)</th>
+                        <th>Accomplished (40-60)</th>
+                        <th>Total</th>
+                        <th>Judge</th>
+                        <th>Comments</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Grades will be inserted here by JavaScript -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
